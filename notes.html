@@ -1,3 +1,20 @@
 
 <button type="button" class="btn btn-info" data-toggle="modal"
  data-target="#demo-2" data-dismiss="modal">Close current, Launch Modal #2</button>
+
+ <div class="row" id="resultWrapper"></div>
+
+ <button type="button" class="btn btn-primary" data-href="chapter-1.html">
+     Chapter 1
+ </button>
+ <button type="button" class="btn btn-primary" data-href="chapter-2.html">
+     Chapter 2
+ </button>
+ 
+ <script type="text/javascript">
+     jQuery(document).ready(function($) {
+         $('button').on('click', function() {
+             $('#resultWrapper').load($(this).data('href'));
+         });
+     });
+ </script>

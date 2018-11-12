@@ -10,8 +10,13 @@
     <!-- Iconos -->
     <link href="font-awesome/css/all.min.css" rel="stylesheet">
     <!-- Fuentes -->
-
     <link href="https://fonts.googleapis.com/css?family=Passion+One|Rubik" rel="stylesheet"> 
+    <!--Script-->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+    <!--Script end-->
   </head>
   <body>
     <!--Navigation-bar-->
@@ -70,21 +75,20 @@
       </header>
         <!--Navigation-bar-end-->
         <!-- Modal HTML login -->
-<div id="myModal-login" class="modal fade">
+  <div id="myModal-login" class="modal fade">
     <div class="modal-dialog modal-login">
       <div class="modal-content">
         <div class="modal-header">
           <div class="avatar">
             <img src="img/user-icon.png" alt="Avatar">
           </div>				
-          <h4 class="modal-title">Ingresa al sistema</h4>	
-  
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Ingresa al sistema</h4>	 
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
           <form action="#" method="post">
             <div class="form-group">
-              <input type="email" class="form-control" name="username" placeholder="Correo" required="required">		
+              <input type="email" class="form-control" name="username" placeholder="Correo Ucol" required="required">		
             </div>
             <div class="form-group">
               <input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">	
@@ -96,7 +100,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <a href="#">¿Contraseña olvidada?</a>
+          <a href="#" data-toggle="modal" data-target="#myModal-recovery" data-dismiss="modal">¿Contraseña olvidada?</a>
         </div>
       </div>
     </div>
@@ -154,6 +158,32 @@
       </div>
     </div>
     <!--Modal HTML register end-->
+    <!--Modal HTML password recovery-->
+  <div id="myModal-recovery" class="modal fade">
+    <div class="modal-dialog modal-register">
+      <div class="modal-content">
+        <div class="modal-header">			
+          <h4 class="modal-title">Recuperar contraseña</h4>	    
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Ingresa la dirección de correo electrónico asociada a tu cuenta, se te enviará un correo con una contraseña que
+                podrás utilizar para iniciar sesión ¡No olvides cambiar la contraseña una vez que ingreses a tu cuenta!
+            </p>
+          <form action="#" method="post">
+            <!--correo-->
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required="required">	
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Confirmar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+  </div>    
+    <!--Modal HTML password recovery end-->
         <!--Carousel-start-->
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -263,6 +293,14 @@
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
+      <!--Included content-->
+      <button type="button" class="btn btn-primary" data-href="category.html">
+          Cargar categorias
+      </button>
+      <div id="includedContent">
+
+      </div>
+      <!--included content-end-->
             <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
     <!-- Footer Elements -->
@@ -315,9 +353,13 @@
   <!-- Footer -->
  
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+          $('button').on('click', function() {
+              $('#includedContent').load($(this).data('href'));
+          });
+      });
+  </script>
+
   </body>
 </html>

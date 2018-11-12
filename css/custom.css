@@ -61,7 +61,6 @@ footer{
   max-width: 100%;
   height: auto !important;
   max-height: 100%
-  object-fit:  !important;
 }
 .carousel-item{
   height: 100%;
@@ -89,10 +88,10 @@ footer{
 .style-1{
   border-top: 1px solid #8c8b8b;
 }
-
 .modal-login {		
   color: #636363;
   width: 350px;
+  margin-top: 10%;
 }
 .modal-login .modal-content {
   padding: 20px;
@@ -153,7 +152,7 @@ footer{
 .modal-login .avatar img {
   width: 100%;
 }
-.modal-login.modal-dialog {
+.modal-login .modal-dialog {
   margin-top: 10%;
 }
 .modal-login .btn {
@@ -220,6 +219,7 @@ right: -5px;
   min-width: 100% !important;
   border-radius: 3px; 
 }
+
 input[type="date"]:before {
   color: lightgrey;
   content: attr(placeholder) !important;
