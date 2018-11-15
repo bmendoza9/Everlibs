@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="display-4">Agregar nuevo recurso</h1>
+    <form action="" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" name="resource-name" placeholder="Titulo del recurso" required="required">
+        </div>
+        <select class="custom-select custom-select-lg mb-3">
+            <option selected>Selecciona el tipo de recurso</option>
+            <option value="1">Papers</option>
+            <option value="2">Books</option>
+            <option value="3">Cursos</option>
+            <option value="4">Videos</option>
+            <option value="5">Portales Blogs</option>
+            <option value="6">Tools Software</option>
+            <option value="7">PPTs SlideShare</option>
+            <option value="8">Infografías y Memes</option>
+            <option value="9">People to follow</option>
+            <option value="10">Comunidades</option>
+            <option value="11">APIs</option>
+            <option value="12">Dataset</option>
+        </select>
+        <div class="form-group">
+            <input type="text" class="form-control" name="resource-author" placeholder="Autor" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="resource-year" placeholder="Año de publicación" required="required">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Agregar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,81 @@
+<!-- The sidebar -->
+<div class="sidebar">
+        <button class="dropdown-btn">Materiales 
+            <i class="fa fa-caret-down"></i>
+        </button>
+            <div class="dropdown-container">
+            <a href="#">Agregar</a>
+            <a href="#">Editar</a>
+            <a href="#">Eliminar</a>
+            </div>  
+        <button class="dropdown-btn">Categorías 
+            <i class="fa fa-caret-down"></i>
+        </button>
+            <div class="dropdown-container">
+            <a href="#" id="#add-category">Agregar</a>
+            <a href="#">Editar</a>
+            <a href="#">Eliminar</a>
+            </div>   
+      </div>
+           
+
+      
+      <!-- Page content -->
+      <div class="content" id="admin-content">
+        
+        <div class="container">
+            <h1 class="display-4">Agregar nuevo recurso</h1>
+            <form action="" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="resource-name" placeholder="Titulo del recurso" required="required">
+                </div>
+                <select class="custom-select mb-3 small">
+                    <option selected>Selecciona el tipo de recurso</option>
+                    <option value="1">Papers</option>
+                    <option value="2">Books</option>
+                    <option value="3">Cursos</option>
+                    <option value="4">Videos</option>
+                    <option value="5">Portales Blogs</option>
+                    <option value="6">Tools Software</option>
+                    <option value="7">PPTs SlideShare</option>
+                    <option value="8">Infografías y Memes</option>
+                    <option value="9">People to follow</option>
+                    <option value="10">Comunidades</option>
+                    <option value="11">APIs</option>
+                    <option value="12">Dataset</option>
+                </select>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="resource-author" placeholder="Autor" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="resource-year" placeholder="Año de publicación" required="required" min="1500" max="2100">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Descripción" required="required"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input type="url" class="form-control" name="resource-url" placeholder="URL del recurso. https://ejemplo.es/docs" required="required">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Agregar</button>
+                </div>
+            </form>
+        </div>
+      </div>
+
+      <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+        }
+</script>
